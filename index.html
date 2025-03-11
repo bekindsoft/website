@@ -14,194 +14,189 @@
             href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         />
         <title>Be Kind Software</title>
+        <style>
+            :root {
+                --spacing: 3rem;
+            }
+            .hero {
+                padding: var(--spacing) 0;
+                text-align: center;
+                margin-bottom: var(--spacing);
+            }
+            .hero h1 {
+                font-size: 3em;
+                margin-bottom: 0.5rem;
+            }
+            .hero p {
+                font-size: 1.2em;
+                color: var(--muted-color);
+            }
+            .section {
+                margin: var(--spacing) 0;
+            }
+            .grid figure {
+                margin: 0;
+                padding: 1rem;
+                border-radius: var(--border-radius);
+                background: var(--card-background-color);
+                transition: transform 0.2s;
+            }
+            .grid figure:hover {
+                transform: translateY(-5px);
+            }
+            .grid img {
+                max-width: 100%;
+                height: auto;
+            }
+            .values {
+                background: var(--card-background-color);
+                padding: var(--spacing);
+                border-radius: var(--border-radius);
+                margin: var(--spacing) 0;
+            }
+            .partner-card {
+                padding: 2rem;
+                background: var(--card-background-color);
+                border-radius: var(--border-radius);
+                text-align: center;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .partner-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+            .partner-card h3 {
+                font-size: 1.5em;
+                margin-bottom: 0.5rem;
+                color: var(--primary);
+            }
+            .partner-card p {
+                color: var(--muted-color);
+                font-size: 1.1em;
+            }
+        </style>
     </head>
     <body>
-        <div class="container">
-            <h1>Be Kind Software</h1>
-            <p>
-                We are a software engineering company based in Guadalajara,
-                Mexico
-            </p>
+        <main class="container">
+            <section class="hero">
+                <h1>Be Kind Software</h1>
+                <p>
+                    A software engineering company in Guadalajara, Mexico, helping businesses 
+                    with the technical heavy-lifting and building products we love.
+                </p>
+            </section>
 
-            <p>
-                We help some businesses with the technical heavy-lifting,
-                whether it’s building features for their hyper-scaling products
-                or taking over the ownership of engineering. We got 'em 💪
-            </p>
-
-            <div class="grid">
-                <a href="https://www.agtonomy.com/" target="_blank">
-                    <figure>
-                        <img
-                            src="https://images.squarespace-cdn.com/content/v1/612fe214e5b5d27c31c30556/1bcd0e92-c632-429c-bd14-4a0b99b66730/Wordmark+-+Black+-+Green+Leaf+Web.png?format=1500w"
-                            alt="Agtonomy"
-                            width="300"
-                        />
-                        <figcaption>
-                            Helping built the next generation of autonomous
-                            agronomy tech.
-                        </figcaption>
-                    </figure>
-                </a>
-
-                <a href="https://www.casasyterrenos.com/" target="_blank">
-                    <figure>
-                        <img
-                            src="https://www.casasyterrenos.com/static/img/home/nav_bar/logo_cyt.svg"
-                            alt="Casas y Terrenos"
-                            width="300"
-                        />
-                        <figcaption>
-                            One of the biggest real estate companies in Latin
-                            America. (fullstack)
-                        </figcaption>
-                    </figure>
-                </a>
-            </div>
-
-            <p>
-                We also build for-profit products of our own as well. This helps
-                us understand more about the process of product and business
-                building—not just the technical side.
-            </p>
-
-            <ul>
-                <li>
-                    <a href="https://plibo.mx/" target="_blank">Plibo</a> - We
-                    built our own invoicing system cuz the gov one sucks
-                </li>
-                <li>
-                    <a href="https://tangomaps.com/" target="_blank">
-                        Tangomaps
+            <section class="section">
+                <h2>Our Partners</h2>
+                <div class="grid">
+                    <a href="https://www.agtonomy.com/" target="_blank" class="partner-card">
+                        <h3>Agtonomy</h3>
+                        <p>Building the next generation of autonomous agronomy tech</p>
                     </a>
-                    - We built our own geospatial data platform cuz google too
-                    expensive
-                </li>
 
-                <!-- <li>Mislinks (que reviva chsm)</li> -->
-                <li>
-                    <a href="https://textfull.io/" target="_blank">
-                        Textfull
+                    <a href="https://www.casasyterrenos.com/" target="_blank" class="partner-card">
+                        <h3>Casas y Terrenos</h3>
+                        <p>Leading real estate platform in Latin America</p>
                     </a>
-                    - A minimal text-only CMS
-                </li>
-            </ul>
+                </div>
+            </section>
 
-            <p>We have helped non-profits as well:</p>
-            <ul>
-                <li>
-                    <a href="https://ambulante.org/" target="_blank"
-                        >Ambulante</a
-                    >
-                </li>
-                <li>
-                    <a href="https://hackergarage.mx/" target="_blank"
-                        >HackerGarage</a
-                    >
-                </li>
-                <li>
-                    <a href="https://codeandomexico.org/" target="_blank"
-                        >Codeando México</a
-                    >
-                </li>
-            </ul>
+            <section class="section">
+                <h2>Our Products</h2>
+                <div class="grid">
+                    <article>
+                        <h3><a href="https://plibo.mx/" target="_blank">Plibo</a></h3>
+                        <p>We built our own invoicing system cuz the gov one sucks</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://tangomaps.com/" target="_blank">Tangomaps</a></h3>
+                        <p>Affordable geospatial data platform</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://textfull.io/" target="_blank">Textfull</a></h3>
+                        <p>Minimal text-only CMS</p>
+                    </article>
+                </div>
+            </section>
 
-            <p>
-                And side projects we love to share with whoever is willing to
-                click 😛:
-            </p>
-            <ul>
-                <li>
-                    <a href="https://textwisely.com/login" target="_blank"
-                        >Textwisely </a
-                    >- AI over SMS
-                </li>
-                <li>
-                    <a href="https://marcasdeagua.com/" target="_blank">
-                        marcasdeagua.com
-                    </a>
-                    - A website to add watermark to your images
-                </li>
-                <li>
-                    <a href="https://minimalsignature.com/" target="_blank">
-                        minimalsignature.com
-                    </a>
-                    - A minimal email signature generator
-                </li>
+            <section class="values">
+                <h2>Our Values</h2>
+                <ul>
+                    <li>100% bootstrapped - no VCs, just sustainable growth</li>
+                    <li> We try to do the best for our employees and our clients, in that order.</li>
+                    <li>100% project success rate</li>
+                    <li>Building for the long term</li>
+                </ul>
+            </section>
 
-                <li>
-                    <a href="https://honeypot.codes" target="_blank">
-                        honeypot.codes
-                    </a>
-                    - A website to create API honeypots
-                </li>
-                <!-- <li>Carlos Videogame</li>
-        <li>Lugi Music</li>
-        <li>Essau Book</li> -->
-            </ul>
+            <section class="section">
+                <h2>Side Projects</h2>
+                <div class="grid">
+                    <article>
+                        <h3><a href="https://textwisely.com/login" target="_blank">Textwisely</a></h3>
+                        <p>AI over SMS</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://marcasdeagua.com/" target="_blank">Marcas de Agua</a></h3>
+                        <p>Easy image watermarking</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://minimalsignature.com/" target="_blank">Minimal Signature</a></h3>
+                        <p>Clean email signature generator</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://honeypot.codes" target="_blank">Honeypot.codes</a></h3>
+                        <p>API honeypot creator</p>
+                    </article>
+                </div>
+            </section>
 
-            <p>
-                We are 100% bootstrapped (no VC's, a slow traditional
-                company).<br />
-                We are profitable, and that's good.<br />
-                We try to do the best for our employees and our clients—in that
-                order.<br />
-                We have a 100% hit rate in our projects.
-            </p>
+            <section class="section">
+                <h2>Industries We Love</h2>
+                <div class="grid">
+                    <article>Robots and robot interfaces</article>
+                    <article>Maps and geospatial data</article>
+                    <article>Small business tech tools</article>
+                    <article>Sports</article>
+                    <article>Videogames</article>
+                </div>
+            </section>
 
-            <p>We vibe with:</p>
-            <ul>
-                <li><a href="https://panic.com/" target="_blank">Panic</a></li>
-                <li>
-                    <a href="https://37signals.com/" target="_blank"
-                        >37signals</a
-                    >
-                </li>
-            </ul>
-
-            <p>Products we love:</p>
-            <ul>
-                <li>
-                    <a href="https://gumroad.com/" target="_blank">Gumroad</a>
-                </li>
-            </ul>
-
-            <p>Industries we are interested in:</p>
-            <ul>
-                <li>Robots and robot interfaces</li>
-                <li>Maps and geospatial data</li>
-                <li>Small business and business tech tools</li>
-                <li>Sports</li>
-                <li>Videogames</li>
-            </ul>
-        </div>
-
-        <form class="container" action="https://submit-form.com/YNSbxAWFx">
-            <h2>Contact with us</h2>
-            <label for="name">Name</label>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                required=""
-            />
-            <label for="email">Email</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                required=""
-            />
-            <label for="message">Message</label>
-            <textarea
-                id="message"
-                name="message"
-                placeholder="Message"
-                required=""
-            ></textarea>
-            <button type="submit">Send</button>
-        </form>
+            <section class="section">
+                <h2>Get in Touch</h2>
+                <form action="https://submit-form.com/YNSbxAWFx">
+                    <div class="grid">
+                        <div>
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="your@email.com"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="How can we help?"
+                        required
+                    ></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
     </body>
 </html>
