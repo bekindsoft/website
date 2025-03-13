@@ -100,12 +100,23 @@
                 font-size: 1.1em;
             }
         </style>
+        <script>
+            // on document ready 
+            document.addEventListener('DOMContentLoaded', function() {
+                // if query param uwu=true set id title to ビカインド
+                if (new URLSearchParams(window.location.search).get('uwu') === 'true') {
+                    document.getElementById('title').innerHTML = 'ビカインド';
+                }
+            });
+
+            
+        </script>
     </head>
     <body>
         <main class="container">
             <section class="hero">
                 <img src="logo.svg" alt="Be Kind Software Logo" class="hero-logo">
-                <h1>Be Kind Software</h1>
+                <h1 id="title">Be Kind Software</h1>
                 <p>
                     A software engineering company in Guadalajara, Mexico, helping businesses 
                     with the technical heavy-lifting and building products we love.
@@ -173,6 +184,10 @@
                     <article>
                         <h3><a href="https://honeypot.codes" target="_blank">Honeypot.codes</a></h3>
                         <p>API honeypot creator</p>
+                    </article>
+                    <article>
+                        <h3><a href="https://alpine-adventure.onrender.com/" target="_blank">Alpine Adventure</a></h3>
+                        <p>Date-like game to learn Alpine.js</p>
                     </article>
                 </div>
             </section>
